@@ -25,13 +25,13 @@ class CashWithdrawal extends Component {
         <div className="cash-withdrawal-container">
           <div className="user-details-container">
             <div className="initial-container">
-              <p>{initial}</p>
+              <p className="initial">{initial}</p>
             </div>
-            <p className="profile-name">{name}</p>
+            <p className="name">{name}</p>
           </div>
           <div className="balance-container">
             <p className="your-balance">Your Balance</p>
-            <p className="current-balance">
+            <p className="balance">
               {balance}
               <br />
               <span className="currency">In Rupees</span>
@@ -39,11 +39,11 @@ class CashWithdrawal extends Component {
           </div>
           <p className="withdraw">Withdraw</p>
           <p className="choose-sum">CHOOSE SUM (IN RUPEES)</p>
-          <ul className="denomination-list">
+          <ul className="denominations-list">
             {denominationsList.map(eachDenomination => (
               <DenominationItem
                 key={eachDenomination.id}
-                denominationsDetails={eachDenomination}
+                denominationDetails={eachDenomination}
                 updateBalance={this.updateBalance}
               />
             ))}

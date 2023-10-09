@@ -1,4 +1,3 @@
-// Write your code here
 import './index.css'
 
 const DenominationItem = props => {
@@ -13,12 +12,13 @@ const DenominationItem = props => {
     <li className="denomination-item">
       <button
         type="button"
-        onClick={onClickDenomination}
         className="denomination-button"
+        onClick={onClickDenomination}
       >
         {value}
       </button>
     </li>
   )
 }
+
 export default DenominationItem
